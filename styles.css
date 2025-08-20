@@ -121,7 +121,7 @@ body {
 .banner {
   width: 100%;
   overflow: hidden;
-  background: #ffdcdc;
+  background: #ff8a65;
   color: rgb(246, 243, 243);
   text-align: center;
   padding: 10px 0;
@@ -146,7 +146,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 10px;
-  background: #3d90d7;
+  background: #ffdcdc;
   padding: 10px;
   overflow: hidden;
   z-index: 2;
@@ -213,7 +213,7 @@ section.gallery figure {
 
 section.gallery img {
   width: 100%;
-  height: 100%;
+  height: 120%;
   object-fit: cover;
 }
 
@@ -252,6 +252,35 @@ section.cards img {
 section.cards figcaption {
   padding: 10px;
   font-size: 1.2rem; /* Ajusta el tamaño del texto */
+}
+
+/*Navbar*/
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  margin-left: 20px;
+}
+
+.navbar-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-menu a:hover {
+  color: #ddd;
 }
 
 @keyframes pop {
