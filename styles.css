@@ -203,3 +203,84 @@ body {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+/*Main*/
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tarjetas en cuadrícula */
+
+section.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1rem;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section.cards figure {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px #673ab7;
+
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+section.cards figure:hover {
+  transform: translateY(-5px);
+}
+
+section.cards img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+section.cards figcaption {
+  padding: 10px;
+  font-size: 1.2rem; /* Ajusta el tamaño del texto */
+}
+
+.carrusel {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: scroll;
+}
+
+.imagen {
+  flex: 1 0 auto;
+  margin: 0 50 px;
+  width: 500px;
+  height: 500px;
+}
+
+/*section.gallery {
+  width: 100vw;
+  height: 50vh;
+  overflow: hidden;
+}
+
+section.gallery .track {
+  display: flex;
+  width: 400vw;
+  height: 50vh;
+  animation: slide 16s infinite;
+}
+
+section.gallery figure {
+  width: 100vw;
+  height: 100%;
+  margin: 0;
+}
+
+section.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}*/
