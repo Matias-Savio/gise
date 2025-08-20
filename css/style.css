@@ -72,28 +72,6 @@ body {
   transform: scale(1.1);
 }
 
-/* Galería Carrusel */
-
-.galeria-scroll {
-  display: flex;
-  width: 600px;
-  height: 430px;
-}
-.galeria-scroll img {
-  width: 0px;
-  flex-grow: 1;
-  object-fit: cover;
-  opacity: 0.8;
-  transition: 0.5 ease;
-}
-
-.galeria-scroll img:hover {
-  cursor: crosshair;
-  width: 300px;
-  opacity: 1;
-  filter: contrast(120%);
-}
-
 /* Galería Masonry */
 .galeria-masonry {
   column-count: 3;
