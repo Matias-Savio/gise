@@ -48,22 +48,6 @@ body {
   color: #ddd;
 }
 
-/* Galería Hover */
-.galeria-hover {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.galeria-hover img {
-  width: 200px;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-.galeria-hover img:hover {
-  transform: scale(1.1);
-}
-
 /* Galería Masonry */
 .galeria-masonry {
   column-count: 3;
@@ -100,8 +84,10 @@ header {
 }
 
 .contenedor {
-  display: flex;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  max-width: 1000px;
 }
 
 .imagen img {
@@ -137,7 +123,6 @@ header {
   opacity: 1;
 }
 
-/* Imagen dentro del modal con animación */
 .modal-contenido {
   max-width: 90%;
   max-height: 80%;
@@ -145,10 +130,17 @@ header {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   transform: scale(0.7);
   transition: transform 0.4s ease;
+  opacity: 0;
 }
 
 .modal.show .modal-contenido {
   transform: scale(1);
+}
+
+/* Efecto fade */
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.4s ease;
 }
 
 /* Botón cerrar */
@@ -165,4 +157,31 @@ header {
 
 .cerrar:hover {
   color: #ff4d4d;
+}
+
+/* Botones anterior/siguiente */
+.anterior,
+.siguiente {
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  font-size: 60px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+  transform: translateY(-50%);
+  transition: color 0.3s;
+}
+
+.anterior:hover,
+.siguiente:hover {
+  color: #ff4d4d;
+}
+
+.anterior {
+  left: 20px;
+}
+.siguiente {
+  right: 20px;
 }
